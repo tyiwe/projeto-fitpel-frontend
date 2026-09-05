@@ -25,6 +25,7 @@ O site é composto por páginas HTML interligadas por um menu de navegação
 ```
 projeto-fitpel-frontend/
 ├── index.html
+├── LICENSE
 └── README.md
 ```
 
