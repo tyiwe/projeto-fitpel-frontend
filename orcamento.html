@@ -30,11 +30,106 @@
   </header>
 
   <main>
+    <section aria-labelledby="orcamento-titulo">
+      <h1 id="orcamento-titulo">Solicitar orçamento</h1>
+      <p>Informe o produto e o volume desejado. Nossa equipe comercial retorna com a melhor condição para o seu perfil
+        de compra — sem intermediários.</p>
+    </section>
 
-    <!-- TODO: A dicionar formulário de solicitação de orçamento -->
+    <section aria-labelledby="form-orcamento-titulo">
+      <h2 id="form-orcamento-titulo">Formulário de orçamento</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Dados de contato</legend>
+
+          <p>
+            <label for="nome-orc">Nome completo *</label><br>
+            <input type="text" id="nome-orc" name="nome" required minlength="3" placeholder="Seu nome completo">
+          </p>
+
+          <p>
+            <label for="empresa-orc">Empresa *</label><br>
+            <input type="text" id="empresa-orc" name="empresa" required placeholder="Nome da empresa">
+          </p>
+
+          <p>
+            <label for="email-orc">E-mail *</label><br>
+            <input type="email" id="email-orc" name="email" required placeholder="voce@empresa.com.br">
+          </p>
+
+          <p>
+            <label for="telefone-orc">Telefone / WhatsApp *</label><br>
+            <input type="tel" id="telefone-orc" name="telefone" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+              placeholder="(11) 91234-5678" title="Formato esperado: (11) 91234-5678">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalhes do pedido</legend>
+
+          <p>
+            <label for="produto">Tipo de fita *</label><br>
+            <select id="produto" name="produto" required>
+              <option value="">Selecione um produto</option>
+              <optgroup label="Fitas de Embalagem">
+                <option value="acrilica">Fita Adesiva Acrílica</option>
+                <option value="hot-melt">Fita Adesiva Hot-melt</option>
+                <option value="crepe">Fita Crepe de Uso Geral</option>
+                <option value="kraft">Fita Kraft</option>
+              </optgroup>
+              <optgroup label="Dupla Face">
+                <option value="dupla-bopp">Dupla Face BOPP</option>
+                <option value="dupla-papel">Dupla Face Papel</option>
+                <option value="dupla-massa">Dupla Face Massa Acrílica</option>
+                <option value="dupla-eva">Dupla Face EVA</option>
+              </optgroup>
+              <optgroup label="Fitas Técnicas">
+                <option value="silver-tape">Silver Tape</option>
+                <option value="demarcacao">Demarcação de Solo</option>
+                <option value="isolante">Fita Isolante Elétrica</option>
+                <option value="antiderrapante">Fita Antiderrapante</option>
+              </optgroup>
+              <option value="personalizada">Fita Personalizada com logo</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="quantidade">Quantidade estimada (rolos) *</label><br>
+            <input type="number" id="quantidade" name="quantidade" required min="1" step="1" placeholder="Ex.: 500">
+          </p>
+
+          <p>
+            <label for="prazo">Prazo desejado</label><br>
+            <input type="date" id="prazo" name="prazo">
+          </p>
+
+          <p>
+            <label for="observacoes">Observações</label><br>
+            <textarea id="observacoes" name="observacoes" rows="5" cols="40"
+              placeholder="Dimensões, cor, aplicação ou qualquer detalhe relevante para o orçamento"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Solicitar orçamento</button>
+          <button type="reset">Limpar formulário</button>
+        </p>
+      </form>
+    </section>
+
+    <section aria-labelledby="como-funciona-titulo">
+      <h2 id="como-funciona-titulo">Como funciona depois do envio</h2>
+      <ol>
+        <li>Nossa equipe comercial analisa o produto e o volume informados.</li>
+        <li>Produção sob demanda — fabricamos conforme o pedido chega, sem estoque parado.</li>
+        <li>Frete calculado e informado antes do fechamento do pedido.</li>
+        <li>Nota fiscal emitida quando o pedido estiver pronto para envio.</li>
+        <li>Suporte pós-venda com equipe comercial dedicada.</li>
+      </ol>
+    </section>
 
   </main>
-
+  
   <footer>
     <address>
       <p>Fit-Pel Indústria e Comércio de Fitas Adesivas</p>

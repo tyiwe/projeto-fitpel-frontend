@@ -30,11 +30,80 @@
   </header>
 
   <main>
+    <section aria-labelledby="contato-titulo">
+      <h1 id="contato-titulo">Fale com a FIT-PEL</h1>
+      <p>Tem uma dúvida sobre produtos, prazos ou parceria comercial? Preencha o formulário abaixo — nossa equipe
+        responde por e-mail ou telefone.</p>
+    </section>
 
-    <!-- TODO: Adicionar conteúdo específico para a página de contato -->
+    <section aria-labelledby="form-contato-titulo">
+      <h2 id="form-contato-titulo">Formulário de contato</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Seus dados</legend>
+
+          <p>
+            <label for="nome">Nome completo *</label><br>
+            <input type="text" id="nome" name="nome" required minlength="3" placeholder="Seu nome completo">
+          </p>
+
+          <p>
+            <label for="email">E-mail *</label><br>
+            <input type="email" id="email" name="email" required placeholder="voce@empresa.com.br">
+          </p>
+
+          <p>
+            <label for="telefone">Telefone / WhatsApp *</label><br>
+            <input type="tel" id="telefone" name="telefone" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+              placeholder="(11) 91234-5678" title="Formato esperado: (11) 91234-5678">
+          </p>
+
+          <p>
+            <label for="empresa">Empresa</label><br>
+            <input type="text" id="empresa" name="empresa" placeholder="Nome da sua empresa (opcional)">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sua mensagem</legend>
+
+          <p>
+            <label for="assunto">Assunto *</label><br>
+            <select id="assunto" name="assunto" required>
+              <option value="">Selecione um assunto</option>
+              <option value="duvida-produto">Dúvida sobre produto</option>
+              <option value="parceria">Parceria comercial / representação</option>
+              <option value="suporte">Suporte a pedido em andamento</option>
+              <option value="outro">Outro assunto</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="mensagem">Mensagem *</label><br>
+            <textarea id="mensagem" name="mensagem" rows="6" cols="40" required minlength="10"
+              placeholder="Descreva sua dúvida ou solicitação"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Enviar mensagem</button>
+          <button type="reset">Limpar formulário</button>
+        </p>
+      </form>
+    </section>
+
+    <section aria-labelledby="outros-canais-titulo">
+      <h2 id="outros-canais-titulo">Outros canais de atendimento</h2>
+      <address>
+        <p>Telefone: <a href="tel:+551126949446">(11) 2694-9446</a></p>
+        <p>WhatsApp: <a href="https://wa.me/5511993935875">(11) 99393-5875</a></p>
+        <p>E-mail: <a href="mailto:sac@fitpel.com.br">sac@fitpel.com.br</a></p>
+        <p>Endereço: Rua Dr. Almeida Lima, 1478 — Mooca, São Paulo, SP — CEP 03103-010</p>
+      </address>
+    </section>
 
   </main>
-
+  
   <footer>
     <address>
       <p>Fit-Pel Indústria e Comércio de Fitas Adesivas</p>
