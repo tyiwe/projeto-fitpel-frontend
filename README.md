@@ -45,11 +45,12 @@ O site é composto por 10 páginas HTML interligadas por um menu de navegação:
 
 ```
 projeto-fitpel-frontend/
-├── index.html
-├── contato.html
-├── orcamento.html
 ├── README.md
+├── LICENSE
 ├── paginas/
+│   ├── index.html
+│   ├── contato.html
+│   ├── orcamento.html
 │   ├── quem-somos.html
 │   ├── fabrica.html
 │   ├── produtos.html
@@ -92,7 +93,7 @@ A ser escrito ao final da Entrega 1: reflexão do grupo sobre o resultado e os a
 
 ## Site hospedado
 
-Link do deploy no Netlify — a ser adicionado após o deploy.
+A ser utilizado o github
 
 ## Uso de Inteligência Artificial
 
