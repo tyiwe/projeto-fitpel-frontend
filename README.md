@@ -99,7 +99,7 @@ Por fim, a padronização de indentação entre os três integrantes do grupo, c
 
 ## Site hospedado
 
-A ser utilizado o github
+[Site hospedado via github](https://tyiwe.github.io/projeto-fitpel-frontend/)
 
 ## Uso de Inteligência Artificial
 
