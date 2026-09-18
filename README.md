@@ -47,8 +47,8 @@ O site é composto por 10 páginas HTML interligadas por um menu de navegação:
 projeto-fitpel-frontend/
 ├── README.md
 ├── LICENSE
+├── index.html
 ├── paginas/
-│   ├── index.html
 │   ├── contato.html
 │   ├── orcamento.html
 │   ├── quem-somos.html
@@ -89,7 +89,13 @@ projeto-fitpel-frontend/
 
 ## Conclusão
 
-A ser escrito ao final da Entrega 1: reflexão do grupo sobre o resultado e os aprendizados da etapa.
+O desenvolvimento do site institucional da FIT-PEL foi uma oportunidade prática de consolidar os fundamentos de HTML5 semântico estudados na disciplina. A escolha de tags como header, nav, main, section, article e footer em todas as páginas exigiu do grupo entender não apenas a sintaxe, mas o propósito de cada elemento na estruturação de um documento acessível e bem organizado.
+
+O maior aprendizado técnico do projeto veio da construção do formulário de contato com validação nativa do HTML5. Entender que o required sozinho não garante o formato correto de um dado, e que atributos como pattern (com expressões regulares) e type="email" fazem esse trabalho sem necessidade de JavaScript, exigiu pesquisa e testes práticos por parte do grupo. Esse processo ajudou a compreender melhor como o navegador interpreta e valida formulários de forma nativa.
+
+Outro ponto de aprendizado relevante foi a organização de arquivos e caminhos relativos: o erro inicial de 404 ao referenciar assets/ de dentro da pasta paginas/ reforçou, na prática, a diferença entre caminhos absolutos e relativos, e a importância de planejar a estrutura de pastas antes de começar a codificar. Já o trabalho com os elementos <audio> e <video> trouxe uma introdução à questão de compatibilidade de codecs entre navegadores, resolvida com a recodificação do vídeo institucional via HandBrake.
+
+Por fim, a padronização de indentação entre os três integrantes do grupo, cada um com seu próprio estilo de edição, evidenciou a importância de convenções de código consistentes ao trabalhar em equipe — um aprendizado que vai além do HTML em si e se aplica a qualquer projeto de desenvolvimento colaborativo. A validação final no W3C Validator serviu como confirmação prática de que o código produzido segue os padrões oficiais da web.
 
 ## Site hospedado
 
