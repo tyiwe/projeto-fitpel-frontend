@@ -7,13 +7,22 @@
   <title>Solicitar Orçamento — FIT-PEL</title>
   <meta name="description"
     content="Solicite um orçamento de fitas adesivas padrão ou personalizadas diretamente com o fabricante em São Paulo.">
+  <link rel="icon" type="image/svg+xml" href="../assets/img/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=Barlow:wght@400;600&amp;display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/main.js" defer></script>
 </head>
 
 <body>
 
-  <header>
-    <p><a href="../index.html"><img src="../assets/img/logo-fitpel.webp" alt="FIT-PEL — Indústria e Comércio de Fitas Adesivas" width="150"></a></p>
-    <nav aria-label="Navegação principal">
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header>
+    <p class="logo"><a href="../index.html"><img src="../assets/img/logo-fitpel.webp" alt="FIT-PEL — Indústria e Comércio de Fitas Adesivas" width="150"></a></p>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">Menu</button>
+    <nav id="menu-principal" aria-label="Navegação principal">
       <ul>
         <li><a href="../index.html">Início</a></li>
         <li><a href="quem-somos.html">Quem Somos</a></li>
@@ -23,13 +32,13 @@
         <li><a href="qual-fita-usar.html">Qual Fita Usar</a></li>
         <li><a href="fabrica.html">Nossa Fábrica</a></li>
         <li><a href="faq.html">Perguntas Frequentes</a></li>
-        <li><a href="orcamento.html" aria-current="page">Orçamento</a></li>
+        <li><a class="nav-cta" href="orcamento.html" aria-current="page">Orçamento</a></li>
         <li><a href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo">
     <section aria-labelledby="orcamento-titulo">
       <h1 id="orcamento-titulo">Solicitar orçamento</h1>
       <p>Informe o produto e o volume desejado. Nossa equipe comercial retorna com a melhor condição para o seu perfil
@@ -38,28 +47,28 @@
 
     <section aria-labelledby="form-orcamento-titulo">
       <h2 id="form-orcamento-titulo">Formulário de orçamento</h2>
-      <form action="#" method="post">
+      <form action="#" method="post" data-sucesso="Pedido de orçamento enviado! Nossa equipe comercial retorna em breve.">
         <fieldset>
           <legend>Dados de contato</legend>
 
           <p>
             <label for="nome-orc">Nome completo *</label><br>
-            <input type="text" id="nome-orc" name="nome" required minlength="3" placeholder="Seu nome completo">
+            <input type="text" id="nome-orc" autocomplete="name" name="nome" required minlength="3" placeholder="Seu nome completo">
           </p>
 
           <p>
             <label for="empresa-orc">Empresa *</label><br>
-            <input type="text" id="empresa-orc" name="empresa" required placeholder="Nome da empresa">
+            <input type="text" id="empresa-orc" autocomplete="organization" name="empresa" required placeholder="Nome da empresa">
           </p>
 
           <p>
             <label for="email-orc">E-mail *</label><br>
-            <input type="email" id="email-orc" name="email" required placeholder="voce@empresa.com.br">
+            <input type="email" id="email-orc" autocomplete="email" name="email" required placeholder="voce@empresa.com.br">
           </p>
 
           <p>
             <label for="telefone-orc">Telefone / WhatsApp *</label><br>
-            <input type="tel" id="telefone-orc" name="telefone" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+            <input type="tel" id="telefone-orc" autocomplete="tel" maxlength="15" name="telefone" required pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
               placeholder="(11) 91234-5678" title="Formato esperado: (11) 91234-5678">
           </p>
         </fieldset>
@@ -67,7 +76,7 @@
         <fieldset>
           <legend>Detalhes do pedido</legend>
 
-          <p>
+          <p class="campo-largo">
             <label for="produto">Tipo de fita *</label><br>
             <select id="produto" name="produto" required>
               <option value="">Selecione um produto</option>
@@ -103,14 +112,14 @@
             <input type="date" id="prazo" name="prazo">
           </p>
 
-          <p>
+          <p class="campo-largo">
             <label for="observacoes">Observações</label><br>
             <textarea id="observacoes" name="observacoes" rows="5" cols="40"
               placeholder="Dimensões, cor, aplicação ou qualquer detalhe relevante para o orçamento"></textarea>
           </p>
         </fieldset>
 
-        <p>
+        <p class="botoes">
           <button type="submit">Solicitar orçamento</button>
           <button type="reset">Limpar formulário</button>
         </p>
@@ -147,7 +156,7 @@
       </ul>
     </nav>
     <p>&copy; 2026 FIT-PEL. Conteúdo baseado na empresa real, reproduzido para fins acadêmicos.</p>
-    <p>Trabalho acadêmico — Desenvolvimento Frontend para Web — Entrega 1</p>
+    <p>Trabalho acadêmico — Desenvolvimento Frontend para Web — Entrega 2</p>
   </footer>
 
 </body>

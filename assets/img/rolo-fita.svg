@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-labelledby="t d">
+  <title id="t">Rolo de fita adesiva vermelha</title>
+  <desc id="d">Ilustração de um rolo de fita adesiva vermelha com a ponta solta estampada com a marca FIT-PEL.</desc>
+  <ellipse cx="200" cy="392" rx="150" ry="14" fill="#ffffff" opacity="0.08"/>
+  <path d="M200 340 C290 345 350 330 412 292 L412 328 C350 366 290 381 200 376 Z" fill="#DC251A"/>
+  <path d="M200 340 C290 345 350 330 412 292" fill="none" stroke="#A8140C" stroke-width="3"/>
+  <path d="M200 376 C290 381 350 366 412 328" fill="none" stroke="#A8140C" stroke-width="3"/>
+  <text x="338" y="344" transform="rotate(-16 338 344)" font-family="Arial, sans-serif" font-size="17" font-weight="700" fill="#000000" text-anchor="middle">FIT-PEL  FIT-PEL</text>
+  <circle cx="200" cy="200" r="168" fill="#DC251A"/>
+  <circle cx="200" cy="200" r="168" fill="none" stroke="#000000" stroke-opacity="0.18" stroke-width="3"/>
+  <circle cx="200" cy="200" r="146" fill="none" stroke="#000000" stroke-opacity="0.12" stroke-width="2"/>
+  <circle cx="200" cy="200" r="124" fill="none" stroke="#000000" stroke-opacity="0.12" stroke-width="2"/>
+  <circle cx="200" cy="200" r="102" fill="none" stroke="#000000" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M60 130 A150 150 0 0 1 150 52" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="200" cy="200" r="84" fill="#C8A066"/>
+  <circle cx="200" cy="200" r="84" fill="none" stroke="#000000" stroke-opacity="0.25" stroke-width="3"/>
+  <circle cx="200" cy="200" r="66" fill="#000000"/>
+</svg>
