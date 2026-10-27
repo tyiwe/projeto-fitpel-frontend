@@ -109,4 +109,4 @@ Parte do conteúdo textual das páginas foi escrita diretamente pelo grupo, e pa
 
 ## Como visualizar
 
-Abra o arquivo `index.html` em um navegador, ou acesse o link do site hospedado acima.
+Abra o arquivo `index.html` em um navegador, ou acesse o link do site hospedado  acima.
