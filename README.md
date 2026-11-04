@@ -86,8 +86,8 @@ projeto-fitpel-frontend/
 **CSS (Entrega 2)**
 
 - Um único arquivo, `css/style.css`, organizado em seções: tokens (variáveis de cor e fonte), base, estrutura, componentes, páginas específicas e responsivo.
-- Identidade visual unificada a partir do logotipo: vermelho `#DC251A` e preto da marca, cinza claro de fundo e um tom de papel kraft usado como acento (marrom das fitas).
-- Tipografia: **Barlow Condensed** nos títulos (referência a sinalização e etiquetas industriais) e **Barlow** no texto corrido.
+- Identidade visual unificada a partir do logotipo, com a paleta **Industrial & Logística**: vermelho `#DC251A` (o mesmo vermelho do logo) no menu, nos botões e nos destaques; grafite `#2C302E` nos textos, títulos, hero e rodapé; cinza claro `#F2F4F7` nos cards, formulários e perguntas frequentes; branco `#FFFFFF` no fundo das páginas; e kraft `#D7A15C` / `#C48B47` como acento (cor de caixa de papelão e de fita crepe). O contraste entre texto e fundo foi calculado e todos os pares usados passam de 4,5:1 (os textos principais passam de 12:1).
+- Tipografia: **Oswald** (pesos 600 e 700) nos títulos e no menu, por ser condensada e lembrar fita de marcação e embalagem industrial, e **Inter** (pesos 400 e 600) no texto corrido, por ser desenhada para telas e ler bem em tabelas e descrições técnicas. As duas são carregadas pelo Google Fonts.
 - Componentes consistentes em todas as páginas: botões, cards, tabelas, formulários, perguntas frequentes (`<details>`) e faixa de chamada para ação.
 - **Grid Layout** na estrutura da página (miolo centralizado com o hero ocupando a largura toda), na grade de cards, nos números do hero, nos campos dos formulários e no rodapé. **Flexbox** no cabeçalho, no menu, nos grupos de botões e nos cards de segmentos.
 - Layout responsivo (desktop, tablet e celular), com foco visível no teclado, link "Pular para o conteúdo" e respeito à preferência de movimento reduzido.
@@ -118,14 +118,35 @@ projeto-fitpel-frontend/
 
 ### Testes de paleta de cores, tipografia e outros elementos
 
-`[PREENCHER]` — descrever os testes **realmente feitos** pelo grupo (prints das alternativas testadas, o que foi descartado e por quê). Sugestão de formato:
+A identidade visual passou por duas rodadas. Na primeira versão, o site foi montado com preto, o vermelho do logo e as fontes Barlow Condensed e Barlow. Na segunda, o grupo pediu ao Gemini sugestões de fontes e paletas para o setor de fitas adesivas, comparou as opções e aplicou a escolhida no código. `[ANEXAR prints da primeira versão e das opções comparadas, por exemplo em assets/img/testes/]`
 
-| Elemento | Alternativas testadas | Escolha final | Motivo |
+**Fontes comparadas** (combinação título + texto):
+
+| Estilo de marca | Fonte dos títulos | Fonte do corpo | Sensação transmitida |
 |---|---|---|---|
-| Paleta | `[PREENCHER]` | Vermelho `#DC251A`, preto, cinza claro e kraft | Vem do logotipo da FIT-PEL; `[PREENCHER: o que foi testado e descartado]` |
-| Fonte dos títulos | `[PREENCHER]` | Barlow Condensed | `[PREENCHER]` |
-| Fonte do texto | `[PREENCHER]` | Barlow | `[PREENCHER]` |
-| Cards / botões / tabelas | `[PREENCHER]` | Ver `css/style.css` | `[PREENCHER]` |
+| **Industrial / B2B** (escolhida) | Oswald (Bold) | Inter (Regular) | Robustez, força técnica e eficiência operacional |
+| E-commerce / embalagens | Montserrat (SemiBold) | Roboto (Regular) | Profissionalismo, agilidade e segurança na entrega |
+| Papelaria / decorativa | Outfit (Bold) | Plus Jakarta Sans | Modernidade, criatividade e acabamento limpo |
+
+**Paletas comparadas:**
+
+| Paleta | Cores | Observação |
+|---|---|---|
+| **1. Industrial & Logística** (escolhida) | Vermelho, kraft `#D7A15C` / `#C48B47`, grafite `#2C302E`, cinza claro `#F2F4F7`, branco | Kraft e grafite remetem a embalagem, expedição e ao setor B2B |
+| 2. Corporativa Tech & Confiança | Vermelho `#DC2626`, azul marinho `#1E293B`, cinza azulado `#E2E8F0`, grafite `#0F172A`, branco | Azul passa credibilidade, mas não aparece na marca |
+| 3. Alta Performance & Resistência | Vermelho `#CC0000`, preto asfalto `#18181B`, amarelo `#F59E0B`, cinza `#F4F4F5`, branco | Visual de ferramentas pesadas; o amarelo competiria com o vermelho |
+
+**Resultado dos testes:**
+
+| Elemento | Escolha final | Motivo |
+|---|---|---|
+| Paleta | Paleta 1, mantendo o vermelho exato do logo (`#DC251A`) no lugar do `#D32F2F` sugerido | O kraft liga o site ao produto e o vermelho igual ao do logo evita dois vermelhos diferentes lado a lado |
+| Fonte dos títulos | Oswald (600 e 700) | Condensada e estruturada, lembra fita de marcação e caixas |
+| Fonte do texto | Inter (400 e 600) | Feita para telas; boa leitura em tabelas de medidas e descrições |
+| Cards, botões e tabelas | Cards em cinza claro com barra vermelha no topo; botões vermelhos que escurecem no hover; tabela com cabeçalho grafite e linhas alternadas | Mesmo padrão em todas as páginas, definido em `css/style.css` |
+| Contraste | Texto grafite sobre branco 13,4:1; branco sobre vermelho 4,9:1; link vermelho escuro sobre branco 7,6:1 | Leitura confortável, acima do mínimo de 4,5:1 |
+
+`[REVISAR]` os motivos acima para que reflitam o que o grupo realmente achou ao comparar as opções.
 
 ### Desafios técnicos
 
@@ -141,6 +162,7 @@ Da Entrega 2:
 
 - **Caminhos absolutos no GitHub Pages:** o site fica em `/projeto-fitpel-frontend/`, então caminhos começando com `/assets/...` (usados no `poster` e no vídeo da página Fita Personalizada) quebram na hospedagem. Todos foram trocados por caminhos relativos (`../assets/...`).
 - **Aplicar identidade visual sem mexer na semântica:** foi preciso adicionar poucas classes ao HTML (por exemplo `.cards`, `.hero`, `.chamada`) e agrupar os `<article>` em contêineres para montar as grades, mantendo a estrutura semântica da Entrega 1.
+- **Trocar de fonte exige reajustar o layout:** ao passar de Barlow Condensed e Barlow para Oswald e Inter (mais largas), o menu de 10 itens quebrava em duas linhas em telas de notebook. Foi preciso reduzir o tamanho da fonte do menu e fazer o menu virar botão a partir de 1280 px de largura.
 - **JavaScript como melhoria, não como dependência:** o menu só se esconde no celular se o JavaScript carregar; a validação continua sendo a nativa do HTML5.
 - `[PREENCHER]` outros desafios que o grupo encontrou.
 
@@ -156,11 +178,11 @@ Na Entrega 1, a IA (Claude) foi usada como apoio ao aprendizado e à execução:
 
 Na Entrega 2:
 
-- **Modelo utilizado:** Claude (Anthropic) — `[CONFIRMAR o modelo/versão exata usada]`.
+- **Modelos utilizados:** Claude (Anthropic) para escrever o CSS, o JavaScript e os ajustes no HTML — `[CONFIRMAR o modelo/versão exata usada]` — e Gemini (Google) para sugerir combinações de fontes e paletas de cores do setor de fitas adesivas `[CONFIRMAR]`.
 - **Motivação:** o grupo ainda está aprendendo CSS e JavaScript e quis acelerar a construção da identidade visual e dos componentes interativos, mantendo o HTML da Entrega 1 como base.
-- **O que foi pedido à IA:** o CSS de todas as páginas, o JavaScript dos componentes (menu, busca, FAQ, formulários), a ilustração SVG do rolo de fita e pequenos ajustes no HTML (links para CSS/JS, classes, caminhos relativos).
+- **O que foi pedido à IA:** o CSS de todas as páginas, o JavaScript dos componentes (menu, busca, FAQ, formulários), a ilustração SVG do rolo de fita, pequenos ajustes no HTML (links para CSS/JS, classes, caminhos relativos) e, depois, a troca das fontes e da paleta de cores pelas opções escolhidas pelo grupo.
 - **Verificação das respostas:** `[CONFIRMAR e AJUSTAR conforme o que o grupo fez de fato]` — leitura e teste do código no navegador (desktop e celular), teste dos formulários (campos vazios, e-mail inválido, telefone), teste dos menus, busca e FAQ, validação das páginas no W3C Validator e do CSS no CSS Validation Service, e comparação do resultado com o enunciado.
-- **Decisões do grupo:** `[PREENCHER]` o que o grupo escolheu, alterou ou recusou em relação ao que a IA sugeriu.
+- **Decisões do grupo:** entre as três paletas e as três combinações de fontes sugeridas, o grupo escolheu a paleta Industrial & Logística e a combinação Oswald + Inter, e decidiu manter o vermelho exato do logo em vez do tom sugerido. `[CONFIRMAR e ACRESCENTAR outras decisões: o que o grupo alterou ou recusou]`
 
 ## Validação (W3C)
 
