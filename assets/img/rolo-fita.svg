@@ -12,7 +12,7 @@
   <circle cx="200" cy="200" r="124" fill="none" stroke="#000000" stroke-opacity="0.12" stroke-width="2"/>
   <circle cx="200" cy="200" r="102" fill="none" stroke="#000000" stroke-opacity="0.12" stroke-width="2"/>
   <path d="M60 130 A150 150 0 0 1 150 52" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="10" stroke-linecap="round"/>
-  <circle cx="200" cy="200" r="84" fill="#C8A066"/>
+  <circle cx="200" cy="200" r="84" fill="#C48B47"/>
   <circle cx="200" cy="200" r="84" fill="none" stroke="#000000" stroke-opacity="0.25" stroke-width="3"/>
-  <circle cx="200" cy="200" r="66" fill="#000000"/>
+  <circle cx="200" cy="200" r="66" fill="#2C302E"/>
 </svg>

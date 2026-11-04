@@ -12,13 +12,14 @@
 :root {
   --vermelho: #DC251A;
   --vermelho-escuro: #A8140C;
-  --preto: #000000;
-  --texto: #222222;
-  --mudo: #5A5A57;
-  --papel: #F1F1EF;
+  --grafite: #2C302E;
+  --texto: #2C302E;
+  --mudo: #5B6370;
+  --papel: #F2F4F7;
   --branco: #FFFFFF;
-  --kraft: #C8A066;
-  --linha: #D6D4CF;
+  --kraft: #D7A15C;
+  --kraft-escuro: #C48B47;
+  --linha: #D5DAE1;
   --sucesso: #1B5E20;
 
   --fonte-titulo: "Oswald", "Arial Narrow", Arial, sans-serif;
@@ -38,7 +39,7 @@ html {
 
 body {
   margin: 0;
-  background: var(--papel);
+  background: var(--branco);
   color: var(--texto);
   font-family: var(--fonte-texto);
   font-size: 18px;
@@ -52,7 +53,7 @@ h3 {
   font-family: var(--fonte-titulo);
   font-weight: 700;
   line-height: 1.1;
-  color: var(--preto);
+  color: var(--grafite);
 }
 
 h1 {
@@ -76,7 +77,7 @@ a {
 }
 
 a:hover {
-  color: var(--preto);
+  color: var(--grafite);
 }
 
 img,
@@ -110,7 +111,7 @@ summary:focus {
   z-index: 100;
   padding: 10px 16px;
   background: var(--branco);
-  color: var(--preto);
+  color: var(--grafite);
 }
 
 .pular:focus {
@@ -159,7 +160,7 @@ body > header nav a {
   font-family: var(--fonte-titulo);
   font-size: 17px;
   font-weight: 600;
-  color: var(--preto);
+  color: var(--grafite);
   text-decoration: none;
   border-bottom: 4px solid transparent;
 }
@@ -177,7 +178,7 @@ body > header nav .nav-cta {
 }
 
 body > header nav .nav-cta:hover {
-  background: var(--preto);
+  background: var(--grafite);
   border-bottom-color: transparent;
   color: var(--branco);
 }
@@ -185,7 +186,7 @@ body > header nav .nav-cta:hover {
 .menu-toggle {
   display: none;
   padding: 8px 18px;
-  background: var(--preto);
+  background: var(--grafite);
   color: var(--branco);
   border: 0;
   border-radius: 6px;
@@ -234,9 +235,9 @@ body > footer {
   grid-template-columns: minmax(20px, 1fr) minmax(0, 620px) minmax(0, 500px) minmax(20px, 1fr);
   gap: 28px 0;
   padding: 44px 0 28px;
-  background: var(--preto);
-  color: #D9D9D6;
-  border-top: 8px solid var(--vermelho);
+  background: var(--grafite);
+  color: #D5DAE1;
+  border-top: 8px solid var(--kraft);
   font-size: 16px;
 }
 
@@ -275,7 +276,7 @@ body > footer a:hover {
 body > footer > p {
   grid-column: 2 / 4;
   margin: 0;
-  color: #A8A8A4;
+  color: #A9B0BC;
   font-size: 14px;
 }
 
@@ -302,8 +303,8 @@ main button,
 .btn:hover,
 main button:hover,
 .voltar-topo:hover {
-  background: var(--preto);
-  border-color: var(--preto);
+  background: var(--grafite);
+  border-color: var(--grafite);
   color: var(--branco);
 }
 
@@ -311,14 +312,14 @@ main button:hover,
 main button[type="reset"],
 main button[type="button"] {
   background: transparent;
-  color: var(--preto);
-  border-color: var(--preto);
+  color: var(--grafite);
+  border-color: var(--grafite);
 }
 
 .btn-contorno:hover,
 main button[type="reset"]:hover,
 main button[type="button"]:hover {
-  background: var(--preto);
+  background: var(--grafite);
   color: var(--branco);
 }
 
@@ -345,7 +346,7 @@ main button[type="button"]:hover {
 article {
   flex: 1;
   padding: 22px 24px 20px;
-  background: var(--branco);
+  background: var(--papel);
   border: 1px solid var(--linha);
   border-top: 8px solid var(--vermelho);
   border-radius: 0 0 6px 6px;
@@ -403,7 +404,7 @@ main ol > li::before {
   top: 4px;
   width: 42px;
   height: 42px;
-  background: var(--preto);
+  background: var(--grafite);
   color: var(--branco);
   border-radius: 50%;
   font-family: var(--fonte-titulo);
@@ -438,7 +439,7 @@ caption {
 
 th {
   padding: 12px 16px;
-  background: var(--preto);
+  background: var(--grafite);
   color: var(--branco);
   font-family: var(--fonte-titulo);
   font-size: 21px;
@@ -465,9 +466,9 @@ fieldset {
   gap: 18px 20px;
   margin: 0 0 24px;
   padding: 24px;
-  background: var(--branco);
+  background: var(--papel);
   border: 1px solid var(--linha);
-  border-top: 8px solid var(--preto);
+  border-top: 8px solid var(--grafite);
 }
 
 legend {
@@ -502,7 +503,7 @@ textarea {
   padding: 11px 12px;
   background: var(--branco);
   color: var(--texto);
-  border: 2px solid #8D8B86;
+  border: 2px solid #8B93A1;
   border-radius: 6px;
   font: inherit;
 }
@@ -571,9 +572,9 @@ textarea.validado:valid {
 /* Perguntas frequentes */
 details {
   margin-bottom: 12px;
-  background: var(--branco);
+  background: var(--papel);
   border: 1px solid var(--linha);
-  border-left: 8px solid var(--preto);
+  border-left: 8px solid var(--grafite);
 }
 
 details[open] {
@@ -629,7 +630,7 @@ video {
   width: 100%;
   max-width: 720px;
   margin: 12px 0 24px;
-  background: var(--preto);
+  background: var(--grafite);
 }
 
 audio {
@@ -642,8 +643,8 @@ audio {
 /* Chamada para ação (faixa preta no fim das páginas) */
 .chamada {
   padding: 36px 40px;
-  background: var(--preto);
-  color: #E6E6E3;
+  background: var(--grafite);
+  color: #E8EBF0;
   border-left: 12px solid var(--vermelho);
 }
 
@@ -670,7 +671,7 @@ audio {
 
 .chamada .btn-contorno:hover {
   background: var(--branco);
-  color: var(--preto);
+  color: var(--grafite);
 }
 
 /* Botão "voltar ao topo" (criado pelo JavaScript) */
@@ -686,7 +687,7 @@ audio {
 
 /* 5. PÁGINAS ESPECÍFICAS --------------------------------------------------- */
 
-/* Home: hero preto com a fita vermelha "impressa" na base */
+/* Home: hero grafite com a fita vermelha "impressa" na base */
 .hero {
   grid-column: 1 / -1;
   display: grid;
@@ -694,7 +695,7 @@ audio {
   position: relative;
   margin: 0 0 56px;
   padding: 56px 0 108px;
-  background: var(--preto);
+  background: var(--grafite);
   color: var(--branco);
   overflow: hidden;
 }
@@ -711,7 +712,7 @@ main > .hero:first-child {
   bottom: 28px;
   height: 46px;
   background: var(--vermelho);
-  color: var(--preto);
+  color: var(--branco);
   font-family: var(--fonte-titulo);
   font-size: 24px;
   font-weight: 700;
@@ -735,7 +736,7 @@ main > .hero:first-child {
 
 .hero-texto > p {
   max-width: 54ch;
-  color: #E6E6E3;
+  color: #E8EBF0;
   font-size: 20px;
 }
 
@@ -756,8 +757,8 @@ main > .hero:first-child {
 main .numeros li {
   margin: 0;
   padding: 0 0 0 16px;
-  border-left: 5px solid var(--vermelho);
-  color: #D9D9D6;
+  border-left: 5px solid var(--kraft);
+  color: #D5DAE1;
   font-size: 16px;
   line-height: 1.3;
 }
@@ -781,7 +782,7 @@ main .numeros li {
 
 .hero .btn-contorno:hover {
   background: var(--branco);
-  color: var(--preto);
+  color: var(--grafite);
 }
 
 .hero a:focus {
@@ -802,11 +803,11 @@ section[aria-labelledby="cores-titulo"] article:nth-child(1)::before {
 }
 
 section[aria-labelledby="cores-titulo"] article:nth-child(2)::before {
-  background: repeating-linear-gradient(45deg, #E4ECF0, #E4ECF0 8px, var(--branco) 8px, var(--branco) 16px);
+  background: repeating-linear-gradient(45deg, #E2E8F0, #E2E8F0 8px, var(--branco) 8px, var(--branco) 16px);
 }
 
 section[aria-labelledby="cores-titulo"] article:nth-child(3)::before {
-  background: #A9743C;
+  background: var(--kraft-escuro);
 }
 
 section[aria-labelledby="cores-titulo"] article:nth-child(4)::before {
