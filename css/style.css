@@ -21,8 +21,8 @@
   --linha: #D6D4CF;
   --sucesso: #1B5E20;
 
-  --fonte-titulo: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
-  --fonte-texto: "Barlow", "Segoe UI", Arial, sans-serif;
+  --fonte-titulo: "Oswald", "Arial Narrow", Arial, sans-serif;
+  --fonte-texto: "Inter", "Segoe UI", Arial, sans-serif;
 }
 
 /* 2. BASE ------------------------------------------------------------------ */
@@ -155,9 +155,9 @@ body > header nav ul {
 
 body > header nav a {
   display: block;
-  padding: 8px 9px;
+  padding: 8px 8px;
   font-family: var(--fonte-titulo);
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 600;
   color: var(--preto);
   text-decoration: none;
@@ -824,7 +824,7 @@ section[aria-labelledby="cores-titulo"] article:nth-child(4)::before {
 }
 
 /* Menu vira botão "Menu" (só quando o JavaScript está ativo) */
-@media (max-width: 1239px) {
+@media (max-width: 1279px) {
   .js .menu-toggle {
     display: block;
   }
