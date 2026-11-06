@@ -5,7 +5,6 @@ A Entrega 1 construiu a estrutura em HTML5 semântico; a Entrega 2 acrescenta CS
 
 **Professor:** Cid Andrade
 
-> **Como usar este rascunho:** tudo o que está como `[PREENCHER]` ou `[CONFIRMAR]` precisa ser feito ou conferido pelo grupo antes da entrega. O que já está escrito vem do README da Entrega 1 ou descreve o que realmente está no código.
 
 ## Alunos
 
@@ -108,19 +107,21 @@ projeto-fitpel-frontend/
 
 ### Pesquisa de leiaute e aparência de outros sites da área
 
-`[PREENCHER]` — o enunciado pede pesquisa de sites da mesma área. Sugestão de formato (3 a 5 sites de fabricantes ou distribuidores de fitas adesivas):
+Antes de definir o visual, o grupo visitou sites de fabricantes de fitas adesivas e outros produtos industriais para ver como organizam menu, produtos e contato. Os prints das páginas iniciais estão em `assets/img/pesquisa/`.
 
-| Site pesquisado | Link | O que observamos (menu, cores, cards, formulário) | O que aproveitamos / o que evitamos |
-|---|---|---|---|
-| `[PREENCHER]` | | | |
-| `[PREENCHER]` | | | |
-| `[PREENCHER]` | | | |
+| Site pesquisado | O que observamos | O que aproveitamos / o que evitamos |
+|---|---|---|
+| [3M Brasil](https://www.3m.com.br/3M/pt_BR/3m-do-brasil/) | Fundo branco, logo e botões em vermelho, tipografia sem serifa e limpa. Barra de busca grande no topo e menu enxuto, com apenas 3 itens (Produtos, Indústrias e Marcas). Imagem grande com caixa escura e título, botão vermelho "Saiba mais" e quatro blocos escuros com ícone e link logo abaixo. Produtos em lista de categorias, sem formulário de contato na página. Print: `assets/img/pesquisa/pesquisa-3m.png` | Aproveitamos o vermelho como cor de destaque nos botões sobre fundo neutro e a entrada por segmento (nossa página Aplicações). Evitamos um menu tão reduzido, porque esconde conteúdo, e colocamos o orçamento direto no menu |
+| [tesa Brasil](https://www.tesa.com/pt-br) | Faixa azul no topo com as abas Indústria e Profissionais, cabeçalho branco com texto azul escuro e logo azul e vermelho. Imagem grande em carrossel (com setas e pausa), caixa azul com título e botão vermelho "SAIBA MAIS". Menus suspensos grandes, com mercados, aplicações e produtos. Print: `assets/img/pesquisa/pesquisa-tesa.png` | Aproveitamos o botão vermelho de chamada para ação em destaque e a organização por aplicação. Evitamos o azul, que não existe na marca da FIT-PEL, e os menus com dezenas de itens: o nosso é único e direto, e o guia "Qual fita usar" ajuda a escolher o produto |
+| [Adelbras](https://www.adelbras.com/) | Fundo claro, vermelho como cor principal (logo, títulos, botões) e fonte arredondada. Menu horizontal pequeno (Home, Quem Somos, Produtos, Blog, Contato), links secundários (Representantes, Downloads, Boletos), busca, botão vermelho "Entrar" e escolha de idioma. Imagem grande em carrossel com o produto em lançamento e botão "Conheça essa novidade"; faixa de cookies cobrindo parte da tela. Print: `assets/img/pesquisa/pesquisa-adelbras.png` | Aproveitamos o produto em destaque ao lado de um título e um botão. Evitamos o carrossel como conteúdo principal, porque esconde informação atrás de cliques e setas; preferimos um hero fixo com os números da empresa e botões de ação visíveis |
+
+![3M Brasil](assets/img/pesquisa/pesquisa-3m.png)
+![tesa Brasil](assets/img/pesquisa/pesquisa-tesa.png)
+![Adelbras](assets/img/pesquisa/pesquisa-adelbras.png)
 
 ### Testes de paleta de cores, tipografia e outros elementos
 
-A identidade visual passou por duas rodadas. Na primeira versão, o site foi montado com preto, o vermelho do logo e as fontes Barlow Condensed e Barlow. Na segunda, o grupo pediu ao Gemini sugestões de fontes e paletas para o setor de fitas adesivas, comparou as opções e aplicou a escolhida no código. `[ANEXAR prints da primeira versão e das opções comparadas, por exemplo em assets/img/testes/]`
-
-**Fontes comparadas** (combinação título + texto):
+A identidade visual passou por duas rodadas. Na primeira versão, o site foi montado com preto, o vermelho do logo e as fontes Barlow Condensed e Barlow. Na segunda, o grupo pediu ao Gemini sugestões de fontes e paletas para o setor de fitas adesivas, comparou as opções e aplicou a escolhida no código. **Fontes comparadas** (combinação título + texto):
 
 | Estilo de marca | Fonte dos títulos | Fonte do corpo | Sensação transmitida |
 |---|---|---|---|
@@ -146,8 +147,6 @@ A identidade visual passou por duas rodadas. Na primeira versão, o site foi mon
 | Cards, botões e tabelas | Cards em cinza claro com barra vermelha no topo; botões vermelhos que escurecem no hover; tabela com cabeçalho grafite e linhas alternadas | Mesmo padrão em todas as páginas, definido em `css/style.css` |
 | Contraste | Texto grafite sobre branco 13,4:1; branco sobre vermelho 4,9:1; link vermelho escuro sobre branco 7,6:1 | Leitura confortável, acima do mínimo de 4,5:1 |
 
-`[REVISAR]` os motivos acima para que reflitam o que o grupo realmente achou ao comparar as opções.
-
 ### Desafios técnicos
 
 Da Entrega 1:
@@ -164,11 +163,8 @@ Da Entrega 2:
 - **Aplicar identidade visual sem mexer na semântica:** foi preciso adicionar poucas classes ao HTML (por exemplo `.cards`, `.hero`, `.chamada`) e agrupar os `<article>` em contêineres para montar as grades, mantendo a estrutura semântica da Entrega 1.
 - **Trocar de fonte exige reajustar o layout:** ao passar de Barlow Condensed e Barlow para Oswald e Inter (mais largas), o menu de 10 itens quebrava em duas linhas em telas de notebook. Foi preciso reduzir o tamanho da fonte do menu e fazer o menu virar botão a partir de 1280 px de largura.
 - **JavaScript como melhoria, não como dependência:** o menu só se esconde no celular se o JavaScript carregar; a validação continua sendo a nativa do HTML5.
-- `[PREENCHER]` outros desafios que o grupo encontrou.
 
 ### Como seria o mesmo resultado desenvolvido com IA
-
-`[REVISAR/AJUSTAR]` — rascunho:
 
 Se o site fosse desenvolvido do zero com IA, o processo equivalente seria: (1) levantar com a empresa os conteúdos reais (serviços, diferenciais, contatos), pois a IA não substitui a entrevista; (2) fornecer à IA o conteúdo, o logotipo, o enunciado com os requisitos e referências de sites da área; (3) pedir a estrutura HTML semântica das 10 páginas e, em seguida, o CSS com a paleta extraída do logotipo e a lista de componentes; (4) pedir o JavaScript para cada comportamento desejado, um de cada vez; (5) revisar o código gerado, testar em navegador e em celular, validar no W3C Validator e no CSS Validation Service e corrigir o que falhar; (6) versionar no GitHub em commits pequenos. O ganho está na velocidade de produzir e iterar o código; o que continua dependendo do grupo é o conteúdo verdadeiro, as decisões de design, a verificação e o entendimento do que foi entregue.
 
@@ -178,45 +174,57 @@ Na Entrega 1, a IA (Claude) foi usada como apoio ao aprendizado e à execução:
 
 Na Entrega 2:
 
-- **Modelos utilizados:** Claude (Anthropic) para escrever o CSS, o JavaScript e os ajustes no HTML — `[CONFIRMAR o modelo/versão exata usada]` — e Gemini (Google) para sugerir combinações de fontes e paletas de cores do setor de fitas adesivas `[CONFIRMAR]`.
+- **Modelos utilizados:** Claude (Anthropic) para escrever e ajustar o CSS, o JavaScript e o HTML, e Gemini (Google) para sugerir combinações de fontes e paletas de cores do setor de fitas adesivas.
 - **Motivação:** o grupo ainda está aprendendo CSS e JavaScript e quis acelerar a construção da identidade visual e dos componentes interativos, mantendo o HTML da Entrega 1 como base.
-- **O que foi pedido à IA:** o CSS de todas as páginas, o JavaScript dos componentes (menu, busca, FAQ, formulários), a ilustração SVG do rolo de fita, pequenos ajustes no HTML (links para CSS/JS, classes, caminhos relativos) e, depois, a troca das fontes e da paleta de cores pelas opções escolhidas pelo grupo.
-- **Verificação das respostas:** `[CONFIRMAR e AJUSTAR conforme o que o grupo fez de fato]` — leitura e teste do código no navegador (desktop e celular), teste dos formulários (campos vazios, e-mail inválido, telefone), teste dos menus, busca e FAQ, validação das páginas no W3C Validator e do CSS no CSS Validation Service, e comparação do resultado com o enunciado.
-- **Decisões do grupo:** entre as três paletas e as três combinações de fontes sugeridas, o grupo escolheu a paleta Industrial & Logística e a combinação Oswald + Inter, e decidiu manter o vermelho exato do logo em vez do tom sugerido. `[CONFIRMAR e ACRESCENTAR outras decisões: o que o grupo alterou ou recusou]`
+- **O que foi pedido à IA:** o CSS de todas as páginas, o JavaScript dos componentes (menu, busca, FAQ, formulários), a ilustração SVG do rolo de fita, pequenos ajustes no HTML (links para CSS/JS, classes, caminhos relativos) e, depois, a troca das fontes e da paleta pelas opções escolhidas pelo grupo.
+- **Verificação das respostas:** o código gerado não foi usado de uma vez: o grupo pegou o que a IA sugeriu em pequenas partes e modificou por conta própria. Cada mudança foi testada no navegador com o Live Server, as páginas foram validadas no W3C Validator e o CSS no CSS Validation Service, e o resultado foi comparado com o enunciado da entrega.
+- **Decisões do grupo:** entre as três paletas e as três combinações de fontes sugeridas, o grupo escolheu a paleta Industrial & Logística e a combinação Oswald + Inter, e manteve o vermelho exato do logo em vez do tom sugerido. O grupo também ajustou o código sugerido pela IA ao conteúdo real da empresa e corrigiu problemas que apareceram nos testes, como o menu de 10 itens que quebrava em duas linhas.
 
 ## Validação (W3C)
 
-`[PREENCHER]` — rodar **todas as páginas** em https://validator.w3.org/ e o CSS em https://jigsaw.w3.org/css-validator/ e anexar os prints ao repositório (ex.: `assets/img/validacao/`).
+Todas as páginas foram validadas no [W3C Markup Validator](https://validator.w3.org/) e o CSS no [CSS Validation Service](https://jigsaw.w3.org/css-validator/). Os prints de cada resultado estão em `assets/img/validacao/`.
 
-| Página | Resultado no W3C Validator | Print |
+| Página | Validador | Print |
 |---|---|---|
-| index.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/contato.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/orcamento.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/quem-somos.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/fabrica.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/produtos.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/aplicacoes.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/fita-personalizada.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/qual-fita-usar.html | `[PREENCHER]` | `[PREENCHER]` |
-| paginas/faq.html | `[PREENCHER]` | `[PREENCHER]` |
-| css/style.css (CSS Validation Service) | `[PREENCHER]` | `[PREENCHER]` |
+| index.html | W3C Markup Validator | [index-validado.png](assets/img/validacao/index-validado.png) |
+| paginas/contato.html | W3C Markup Validator | [contato-validado.png](assets/img/validacao/contato-validado.png) |
+| paginas/orcamento.html | W3C Markup Validator | [orcamento-validado.png](assets/img/validacao/orcamento-validado.png) |
+| paginas/quem-somos.html | W3C Markup Validator | [quem-somos-validado.png](assets/img/validacao/quem-somos-validado.png) |
+| paginas/fabrica.html | W3C Markup Validator | [fabrica-validado.png](assets/img/validacao/fabrica-validado.png) |
+| paginas/produtos.html | W3C Markup Validator | [produtos-validado.png](assets/img/validacao/produtos-validado.png) |
+| paginas/aplicacoes.html | W3C Markup Validator | [aplicacoes-validado.png](assets/img/validacao/aplicacoes-validado.png) |
+| paginas/fita-personalizada.html | W3C Markup Validator | [fita-personalizada-validado.png](assets/img/validacao/fita-personalizada-validado.png) |
+| paginas/qual-fita-usar.html | W3C Markup Validator | [qual-fita-usar-validado.png](assets/img/validacao/qual-fita-usar-validado.png) |
+| paginas/faq.html | W3C Markup Validator | [faq-validado.png](assets/img/validacao/faq-validado.png) |
+| css/style.css | CSS Validation Service | [css-validado.png](assets/img/validacao/css-validado.png) |
+
+![Validação de index.html](assets/img/validacao/index-validado.png)
+![Validação de paginas/contato.html](assets/img/validacao/contato-validado.png)
+![Validação de paginas/orcamento.html](assets/img/validacao/orcamento-validado.png)
+![Validação de paginas/quem-somos.html](assets/img/validacao/quem-somos-validado.png)
+![Validação de paginas/fabrica.html](assets/img/validacao/fabrica-validado.png)
+![Validação de paginas/produtos.html](assets/img/validacao/produtos-validado.png)
+![Validação de paginas/aplicacoes.html](assets/img/validacao/aplicacoes-validado.png)
+![Validação de paginas/fita-personalizada.html](assets/img/validacao/fita-personalizada-validado.png)
+![Validação de paginas/qual-fita-usar.html](assets/img/validacao/qual-fita-usar-validado.png)
+![Validação de paginas/faq.html](assets/img/validacao/faq-validado.png)
+![Validação de css/style.css](assets/img/validacao/css-validado.png)
 
 ## Domínio
 
-A FIT-PEL **já possui domínio próprio**, `fitpel.com.br` (o mesmo usado no e-mail institucional `sac@fitpel.com.br`), portanto o grupo não precisou comprar um. `[ANEXAR print da consulta em https://registro.br mostrando o domínio registrado e o titular, ex.: assets/img/validacao/registro-br.png]`
+A FIT-PEL **já possui domínio próprio**, `fitpel.com.br` (o mesmo usado no e-mail institucional `sac@fitpel.com.br`), portanto o grupo não precisou comprar um. O site hospedado ainda usa o endereço do GitHub Pages; para usar o domínio próprio seria preciso apontar o DNS, o que depende de quem administra o domínio na empresa. Consulta feita no Registro.br em 06/11/2026: o domínio aparece como **"não disponível para registro — Domínio já registrado"**.
+
+![Consulta de fitpel.com.br no Registro.br](assets/img/validacao/registro-br.png)
 
 **Se a empresa não tivesse domínio**, o processo seria:
 
 1. **Escolha do nome:** `fitpel.com.br`, curto, igual ao nome da marca e com a terminação `.com.br`, a mais reconhecida por empresas brasileiras.
 2. **Pesquisa de disponibilidade:** consultar o nome em https://registro.br (campo de busca na página inicial) e registrar o resultado com print; também conferir se não há marca ou nome semelhante já em uso.
-3. **Registro:** criar o cadastro no Registro.br com o CNPJ da empresa (72.704.299/0001-76) e solicitar o registro do domínio, que é pago por ano (`[CONFIRMAR o valor atual no Registro.br]`).
+3. **Registro:** criar o cadastro no Registro.br com o CNPJ da empresa (72.704.299/0001-76) e solicitar o registro do domínio, com pagamento anual conforme a tabela de preços do próprio Registro.br.
 4. **Apontamento para a hospedagem:** nas configurações de DNS, criar os registros indicados pelo GitHub Pages (ou pelo Netlify) e informar o domínio no campo "Custom domain" do repositório, ativando o HTTPS.
 5. **E-mail:** manter ou configurar as caixas de e-mail do domínio, como `sac@fitpel.com.br`.
 
 ## Conclusão
-
-`[REVISAR]` — rascunho escrito a partir do que está documentado neste README; o grupo deve ajustar para refletir a opinião real de cada integrante.
 
 Ao longo das duas entregas, o site da FIT-PEL saiu de uma estrutura em HTML puro (Entrega 1) para um site com identidade visual própria, responsivo e interativo (Entrega 2). A maior mudança foi perceber como o CSS dá identidade à marca: a mesma estrutura semântica passou a ter cores, tipografia e componentes (botões, cards, tabelas, formulários) que se repetem nas 10 páginas, com o vermelho do logotipo como fio condutor e o kraft e o grafite remetendo a embalagem e indústria.
 
