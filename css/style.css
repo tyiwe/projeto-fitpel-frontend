@@ -206,7 +206,8 @@ main > * {
   grid-column: 2;
 }
 
-main > section {
+main > section,
+main > article.sem-moldura {
   margin: 0 0 56px;
 }
 
@@ -359,6 +360,21 @@ article h3 {
 
 article p:last-child {
   margin-bottom: 0;
+}
+
+/* <article> de página inteira: contêiner semântico sem aparência de card */
+article.sem-moldura {
+  padding: 0;
+  background: none;
+  border: 0;
+}
+
+article.sem-moldura > h2 {
+  font-size: 38px;
+}
+
+article.sem-moldura > ol {
+  max-width: 72ch;
 }
 
 /* Listas: marcador quadrado (fita cortada) e passos numerados */
@@ -871,6 +887,10 @@ section[aria-labelledby="cores-titulo"] article:nth-child(4)::before {
   }
 
   h2 {
+    font-size: 32px;
+  }
+
+  article.sem-moldura > h2 {
     font-size: 32px;
   }
 
