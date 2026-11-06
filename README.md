@@ -104,7 +104,7 @@ projeto-fitpel-frontend/
 - **Formulários**: máscara de telefone `(11) 91234-5678`, mensagens de erro em português ao sair do campo, confirmação de envio e data mínima (hoje) no prazo do orçamento.
 - Números da página inicial que "contam" até o valor final e botão "Topo".
 
-> **Sobre o envio dos formulários:** por enquanto o formulário roda em **modo demonstração** (`action="#"`): ele valida, mostra a confirmação e avisa que nenhum dado foi enviado. Para um envio real, basta trocar o `action` por um endpoint de serviço de formulários (ex.: Formspree) — o `main.js` já envia via `fetch` quando o `action` é diferente de `#`. `[CONFIRMAR]` qual opção o grupo adotou.
+> **Envio dos formulários:** os formulários de contato e de orçamento enviam os dados de verdade pelo **Formspree** (serviço gratuito de formulários, já que o GitHub Pages só hospeda arquivos estáticos). A validação nativa do HTML5 roda primeiro; se estiver tudo certo, o `main.js` envia os dados por `fetch` ao endpoint do Formspree, sem recarregar a página, e mostra a confirmação (ou uma mensagem de erro, se o envio falhar). As mensagens chegam ao e-mail de um integrante do grupo, e não ao da empresa, por se tratar de um trabalho acadêmico.
 
 ### Pesquisa de leiaute e aparência de outros sites da área
 
@@ -204,20 +204,27 @@ Na Entrega 2:
 
 ## Domínio
 
-`[PREENCHER]` — o enunciado pede que o grupo explicite qual domínio compraria e o processo de aquisição, com a pesquisa de disponibilidade comprovada, caso a empresa ainda não tenha um.
+A FIT-PEL **já possui domínio próprio**, `fitpel.com.br` (o mesmo usado no e-mail institucional `sac@fitpel.com.br`), portanto o grupo não precisou comprar um. `[ANEXAR print da consulta em https://registro.br mostrando o domínio registrado e o titular, ex.: assets/img/validacao/registro-br.png]`
 
-- **Situação atual:** a FIT-PEL já usa o e-mail `sac@fitpel.com.br`, o que indica que a empresa provavelmente já possui o domínio `fitpel.com.br`. `[CONFIRMAR]` consultando o domínio em https://registro.br e anexar o print da consulta (titular e situação do domínio).
-- **Se a empresa não tivesse domínio:** `[PREENCHER]` domínio escolhido (ex.: `fitpel.com.br`), consulta de disponibilidade no Registro.br (print), processo de compra (cadastro, pagamento anual, apontamento de DNS para o GitHub Pages ou Netlify) e custo estimado.
+**Se a empresa não tivesse domínio**, o processo seria:
+
+1. **Escolha do nome:** `fitpel.com.br`, curto, igual ao nome da marca e com a terminação `.com.br`, a mais reconhecida por empresas brasileiras.
+2. **Pesquisa de disponibilidade:** consultar o nome em https://registro.br (campo de busca na página inicial) e registrar o resultado com print; também conferir se não há marca ou nome semelhante já em uso.
+3. **Registro:** criar o cadastro no Registro.br com o CNPJ da empresa (72.704.299/0001-76) e solicitar o registro do domínio, que é pago por ano (`[CONFIRMAR o valor atual no Registro.br]`).
+4. **Apontamento para a hospedagem:** nas configurações de DNS, criar os registros indicados pelo GitHub Pages (ou pelo Netlify) e informar o domínio no campo "Custom domain" do repositório, ativando o HTTPS.
+5. **E-mail:** manter ou configurar as caixas de e-mail do domínio, como `sac@fitpel.com.br`.
 
 ## Conclusão
 
-`[PREENCHER]` — reflexão do grupo sobre o resultado e os aprendizados da etapa. Sugestões de pontos para comentar:
+`[REVISAR]` — rascunho escrito a partir do que está documentado neste README; o grupo deve ajustar para refletir a opinião real de cada integrante.
 
-- O que mudou no site ao passar do HTML puro para o CSS (organização visual, identidade da marca).
-- O que foi mais difícil: Grid e Flexbox, responsividade, JavaScript, validação.
-- O que aprenderam sobre melhoria progressiva (o site funciona sem JavaScript?) e sobre acessibilidade.
-- O que aprenderam trabalhando com IA, o que precisou ser verificado ou corrigido, e o que faria diferente.
-- O que fariam como próximos passos (envio real do formulário, otimização de imagens e vídeos, domínio próprio).
+Ao longo das duas entregas, o site da FIT-PEL saiu de uma estrutura em HTML puro (Entrega 1) para um site com identidade visual própria, responsivo e interativo (Entrega 2). A maior mudança foi perceber como o CSS dá identidade à marca: a mesma estrutura semântica passou a ter cores, tipografia e componentes (botões, cards, tabelas, formulários) que se repetem nas 10 páginas, com o vermelho do logotipo como fio condutor e o kraft e o grafite remetendo a embalagem e indústria.
+
+As partes mais trabalhosas foram o Grid e o Flexbox combinados com o leiaute responsivo (por exemplo, o menu de 10 itens que quebrava em duas linhas ao trocar a fonte para Oswald e Inter) e os caminhos relativos no GitHub Pages, que funcionavam no computador e quebravam na hospedagem. Aprendemos também a tratar o JavaScript como melhoria progressiva: validação nativa do HTML5 continua funcionando sem JavaScript, e o script apenas acrescenta máscara de telefone, mensagens em português, busca instantânea, menu responsivo e FAQ expansível.
+
+Sobre o uso de IA, ela acelerou a escrita do CSS e do JavaScript, mas não substitui a visita à empresa, o levantamento do conteúdo real, a escolha da paleta e das fontes, o teste no navegador e a validação no W3C Validator e no CSS Validation Service, que continuam sendo responsabilidade do grupo. Entender o código entregue foi necessário para corrigir problemas e justificar as decisões.
+
+Como próximos passos, o grupo pretende otimizar imagens e vídeos para carregar mais rápido e, se a empresa quiser, apontar o domínio `fitpel.com.br` para a hospedagem do site.
 
 ## Como visualizar
 
